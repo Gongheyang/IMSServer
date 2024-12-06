@@ -1,0 +1,14 @@
+*.user
+*.db
+*.opendb
+*.suo
+
+/_vsTemp
+/bind
+/bin
+/libd
+/lib
+/bin64
+/bind64
+/libd64
+/lib64
