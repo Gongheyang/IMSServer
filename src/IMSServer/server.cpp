@@ -148,7 +148,7 @@ void CAppServer::CreateMultiThread()
     SYSTEM_INFO SystemInfo;
     GetSystemInfo(&SystemInfo);
     //线程数目=系统进程数目的两倍.
-    for (int i = 0; i < SystemInfo.dwNumberOfProcessors /** 2*/; i++) {
+    for (int i = 0; i < (SystemInfo.dwNumberOfProcessors * 2); i++) {
         HANDLE hProcessIO = CreateThread(NULL, 0, ReceiveProcessIO, this, 0, NULL);
         if (hProcessIO) {
             CloseHandle(hProcessIO);
